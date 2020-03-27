@@ -43,10 +43,24 @@
 </head>
 
 <body>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span>
+	</label>
+	
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+			<!--<li><img style='width:80px' src='res\icon\android\ccradio_icon.png'></li>-->
+            <li><a href="canal1.html">1</a></li>
+            <li><a href="canal2.html">2</a></li>
+            <li><a href="canal3.html">3</a></li>
+            <li><a href="info.html">+Info</a></li>
+        </ul>
+    </div>
     <div class="app">
         <div id="deviceready" class="blink">
-            <!--<p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>-->
+            <p>CCRadio es una radio libre de pago por comunicación pública.</p>
+			<p>Úsala en tu tienda, en tu despacho o en tu local de hostelería con total libertad y seguridad.</p>
+			<p>Toda la música emitida está licenciada bajo Creative Commons.</p>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>

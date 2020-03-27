@@ -8,10 +8,10 @@
     </feature>
     <name>CCRadioApp</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Aplicación para escuchar CCRadio en tu Smartphone o dispositivo mobil.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="arbr.dev@gmail.com" href="http://www.ccradio.es">
+        ARBR Proxectos.
     </author>
     <content src="index.html" />
     <access origin="*" />
