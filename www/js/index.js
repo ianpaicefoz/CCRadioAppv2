@@ -33,6 +33,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+		$.support.cors                 = true;
+        $.mobile.allowCrossDomainPages = true;
+		$.mobile.pushStateEnabled = false;
         //app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
