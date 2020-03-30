@@ -20,7 +20,7 @@
 body {
 	/*background-image: url("../res/screen/android/black_bkg.jpg");
 	background-size: cover;*/
-	background-color: grey;
+	background-color: black;
     font-family: "Segoe UI", sans-serif;
     font-size:100%;
     margin:0;
@@ -49,6 +49,11 @@ label[for="abrir-cerrar"] {
     display:inline-block;
     width:100%;
 
+}
+
+#deviceready{
+	padding-top:25px;
+	transform: scale(1.2);
 }
 
 .cerrar {

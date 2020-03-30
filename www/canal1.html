@@ -40,32 +40,52 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>CCRADIO APP</title>
+	<style>
+	body{
+		height:100%;
+		background-image:url(img/f1.jpg);
+		background-repeat:no-repeat;
+		background-size:cover;
+		/*filter: blur(4px);*/
+	}
+	</style>
 </head>
 
 <body>
-    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
-    <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span>
+	<input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+	<label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span>
 	</label>
 	
-    <div id="sidebar" class="sidebar">
-        <ul class="menu">
+	<div id="sidebar" class="sidebar">
+		<ul class="menu">
 			<!--<li><img style='width:80px' src='res\icon\android\ccradio_icon.png'></li>-->
-            <li><a href="canal1.html">1</a></li>
-            <li><a href="canal2.html">2</a></li>
-            <li><a href="canal3.html">3</a></li>
-            <li><a href="index.html">+Info</a></li>
-        </ul>
-    </div>
-    <div class="app">
-        <div id="deviceready" class="blink">
-            <iframe src="https://radioserver02.ccradio.es/public/ccradio/embed" frameborder="0" allowtransparency="true" style="width: 70%; min-height: 150px; border: 0;"></iframe>	
-        </div>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        /*app.initialize();*/
-    </script>
+			<li><a href="canal1.html">1</a></li>
+			<li><a href="canal2.html">2</a></li>
+			<li><a href="canal3.html">3</a></li>
+			<li><a href="index.html">+Info</a></li>
+		</ul>
+	</div>
+	<div class="app">
+		<div id="deviceready" class="blink">
+			<iframe src="https://radioserver02.ccradio.es/public/ccradio/embed" frameborder="0" allowtransparency="true" style="width: 70%; min-height: 150px; border: 0;"></iframe>	
+		</div>
+	</div>
+	<footer>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Barra horizontal Reproductor -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:320px;height:100px"
+			 data-ad-client="ca-pub-3096329003114803"
+			 data-ad-slot="6583868032"></ins>
+		<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</footer>	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		/*app.initialize();*/
+	</script>
 </body>
 
 </html>
