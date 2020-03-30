@@ -33,7 +33,7 @@
     <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-	<plugin name="cordova-plugin-admob" source="npm" spec="~3.2.5" />
+	<!--<plugin name="cordova-plugin-admob" source="npm" spec="~3.2.5" />-->
     <platform name="android">
 		<icon src="www/res/icon/android/ccrado_icon.png" />
 		<splash src="www/res/screen/android/black_bkg.jpg" />
