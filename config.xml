@@ -8,6 +8,7 @@
         ARBR Proxectos.
     </author>
     <content src="index.html" />
+	 <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" />
 	<preference name="android-targetSdkVersion"   />
