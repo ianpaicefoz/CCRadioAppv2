@@ -34,7 +34,9 @@
     <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-	<!--<plugin name="cordova-plugin-admob-free" source="npm" /><variable name="ADMOB_APP_ID" value="ca-app-pub-3940256099942544~3347511713" /> </plugin>-->
+	<plugin name="cordova-plugin-admob-free"/>
+		<variable name="ADMOB_APP_ID" value="ca-app-pub-3940256099942544~3347511713" /> 
+	</plugin>
     <platform name="android">
 		<icon src="www/res/icon/android/ccradio_icon.png" />
 		<splash src="www/res/screen/android/black_bkg.jpg" />
