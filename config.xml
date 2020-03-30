@@ -36,7 +36,7 @@
 	<!--<plugin name="cordova-plugin-admob" source="npm" spec="~3.2.5" />-->
     <platform name="android">
 		<icon src="www/res/icon/android/ccrado_icon.png" />
-		<splash src="www/res/screen/android/black_bkg.jpg" />
+		<!--<splash src="www/res/screen/android/black_bkg.jpg" />-->
     </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
