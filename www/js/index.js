@@ -22,7 +22,8 @@ var bannerAdUnit = "ca-app-pub-3940256099942544/6300978111";
 var interstitialAdUnit = "ca-app-pub-3940256099942544/1033173712";
 
 var isOverlap = true; //true: overlap, false: split
-var isTest = false;
+//var isTest = false;
+var isTest = true;
 
 var url_c1 = "https://radioserver02.ccradio.es/api/nowplaying/ccradio";
 var url_c2 = "https://radioserver02.ccradio.es/api/nowplaying/ccradio_canal_2";
