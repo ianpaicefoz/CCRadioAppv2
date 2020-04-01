@@ -16,8 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var bannerAdUnit = "ca-app-pub-3096329003114803/7523999379";
-var interstitialAdUnit = "ca-app-pub-4906074177432504/1649035673";
+//var bannerAdUnit = "ca-app-pub-3096329003114803/7523999379";
+var bannerAdUnit = "ca-app-pub-3940256099942544/6300978111";
+//var interstitialAdUnit = "ca-app-pub-4906074177432504/1649035673";
+var interstitialAdUnit = "ca-app-pub-3940256099942544/1033173712";
+
 var isOverlap = true; //true: overlap, false: split
 var isTest = false;
 
