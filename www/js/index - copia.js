@@ -21,10 +21,6 @@ var interstitialAdUnit = "ca-app-pub-4906074177432504/1649035673";
 var isOverlap = true; //true: overlap, false: split
 var isTest = false;
 
-var url_c1 = "https://radioserver02.ccradio.es/api/nowplaying/ccradio";
-var url_c2 = "https://radioserver02.ccradio.es/api/nowplaying/ccradio_canal_2";
-var url_c3 = "https://radioserver02.ccradio.es/api/nowplaying/ccradio_canal_2";
-
 document.addEventListener("deviceready", function(){
 	window.admob.setUp(bannerAdUnit, interstitialAdUnit, isOverlap, isTest);
 	//
@@ -58,31 +54,37 @@ document.addEventListener("deviceready", function(){
 	
 }, false);
 
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+		$.support.cors                 = true;
+        $.mobile.allowCrossDomainPages = true;
+		$.mobile.pushStateEnabled = false;
+        //app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-$(document).ready( function() {
-	
-	setInterval(function(){ reloadInfoMusic(); }, 5000);
-	
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
 
-	
-	function reloadInfoMusic(){
-		$.getJSON(url_c1, function(c1_data){
-			info_oyentes_html = "<span style='font-size:10px;'>Oyentes conectados: " + c1_data.listeners.current + "</span>";
-			info_siguiente_cancion = "<br><span style='font-size:10px;'>Siguiente canción: <br><img src=" + c1_data.playing_next.song.art + " width='50'><br>"+ c1_data.playing_next.song.text + "</span>";
-			$("#playing_c1").html(info_oyentes_html + info_siguiente_cancion);
-		});
-		$.getJSON(url_c2, function(c2_data){
-			info_oyentes_html = "<span style='font-size:10px;'>Oyentes conectados: " + c2_data.listeners.current + "</span>";
-			info_siguiente_cancion = "<br><span style='font-size:10px;'>Siguiente canción: <br><img src=" + c2_data.playing_next.song.art + " width='50'><br>"+ c2_data.playing_next.song.text + "</span>";
-			$("#playing_c2").html(info_oyentes_html + info_siguiente_cancion);
-		});
-		$.getJSON(url_c3, function(c3_data){
-			info_oyentes_html = "<span style='font-size:10px;'>Oyentes conectados: " + c3_data.listeners.current + "</span>";
-			info_siguiente_cancion = "<br><span style='font-size:10px;'>Siguiente canción: <br><img src=" + c3_data.playing_next.song.art + " width='50'><br>"+ c3_data.playing_next.song.text + "</span>";
-			$("#playing_c3").html(info_oyentes_html + info_siguiente_cancion);
-		});
-		
-		
-	};
-	
-});
+        console.log('Received Event: ' + id);
+    }
+};
