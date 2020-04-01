@@ -134,10 +134,11 @@ input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
     margin: 4rem auto;
     display: block;
     width: 80%;
-    min-width:200px;
+    min-width:120px;
 }
 
 .sidebar a {
+	text-align: center;
     display: block;
     font-size: 120%;
     color: #eee;

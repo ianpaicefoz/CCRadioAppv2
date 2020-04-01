@@ -37,6 +37,7 @@
 	<plugin name="cordova-plugin-admob-free" source="npm">
 		<variable name="ADMOB_APP_ID" value="ca-app-pub-3096329003114803/7523999379" /> 
 	</plugin>
+	<plugin name="cordova-plugin-insomnia" />
     <platform name="android">
 		<icon src="www/res/icon/android/ccradio_icon.png" />
 		<splash src="www/res/screen/android/black_bkg.jpg" />
