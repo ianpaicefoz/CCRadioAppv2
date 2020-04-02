@@ -75,18 +75,24 @@ $(document).ready( function() {
 	
 	setInterval(function(){ reloadInfoMusic(); }, 5000);
 	
-
+	$('#fs').click(function() {
+		if($(this).is(':checked')){
+			window.plugins.insomnia.keepAwake();
+		}else{
+			window.plugins.insomnia.allowSleepAgain();
+		}
+	});		
 	
 	function reloadInfoMusic(){
 		$.getJSON(url_c1, function(c1_data){
 			if(current_listeners_c1 !=  c1_data.listeners.current){
-				current_listeners_c1 !=  c1_data.listeners.current;
+				current_listeners_c1 =  c1_data.listeners.current;
 				info_oyentes_html = "<span style='font-size:10px;'>Oyentes conectados: " + c1_data.listeners.current + "</span>";
 				$("#oyentes_c1").html(info_oyentes_html);
 			}
 			
 			if(next_song_c1 != c1_data.playing_next.song.text){
-				next_song_c1 != c1_data.playing_next.song.text;
+				next_song_c1 = c1_data.playing_next.song.text;
 				info_siguiente_cancion = "<span style='font-size:10px;'>Siguiente canción:<br><img src=" + c1_data.playing_next.song.art + " width='50'><br>"+ c1_data.playing_next.song.text + "</span>";
 				$("#playing_c1").html(info_siguiente_cancion);
 			}
@@ -94,13 +100,13 @@ $(document).ready( function() {
 		
 		$.getJSON(url_c2, function(c2_data){
 			if(current_listeners_c2 !=  c2_data.listeners.current){
-				current_listeners_c2 !=  c2_data.listeners.current;
+				current_listeners_c2 =  c2_data.listeners.current;
 				info_oyentes_html = "<span style='font-size:10px;'>Oyentes conectados: " + c2_data.listeners.current + "</span>";
 				$("#oyentes_c2").html(info_oyentes_html)
 			}
 			
 			if(next_song_c2 != c2_data.playing_next.song.text){
-				next_song_c2 != c2_data.playing_next.song.text;
+				next_song_c2 = c2_data.playing_next.song.text;
 				info_siguiente_cancion = "<br><span style='font-size:10px;'>Siguiente canción:<br><img src=" + c2_data.playing_next.song.art + " width='50'><br>"+ c2_data.playing_next.song.text + "</span>";
 				$("#playing_c2").html(info_siguiente_cancion);
 			}
@@ -108,13 +114,13 @@ $(document).ready( function() {
 		});
 		$.getJSON(url_c3, function(c3_data){
 			if(current_listeners_c3 !=  c3_data.listeners.current){
-				current_listeners_c3 !=  c3_data.listeners.current;
+				current_listeners_c3 =  c3_data.listeners.current;
 				info_oyentes_html = "<span style='font-size:10px;'>Oyentes conectados: " + c3_data.listeners.current + "</span>";
 				$("#oyentes_c3").html(info_oyentes_html);				
 			}
 			
 			if(next_song_c3 != c3_data.playing_next.song.text){
-				next_song_c3 != c3_data.playing_next.song.text;
+				next_song_c3 = c3_data.playing_next.song.text;
 				info_siguiente_cancion = "<span style='font-size:10px;'>Siguiente canción:<br><img src=" + c3_data.playing_next.song.art + " width='50'><br>"+ c3_data.playing_next.song.text + "</span>";
 				$("#playing_c3").html(info_siguiente_cancion);				
 			}
