@@ -59,15 +59,24 @@
 	<div id="sidebar" class="sidebar">
 		<ul class="menu">
 			<!--<li><img style='width:80px' src='res\icon\android\ccradio_icon.png'></li>-->
-			<li><a href="canal1.html">1</a></li>
-			<li><a href="canal2.html">2</a></li>
-			<li><a href="canal3.html">3</a></li>
-			<li><a href="index.html">+Info</a></li>
+            <li><a href="canal1.html">Canal 1</a></li>
+            <li><a href="canal2.html">Canal 2</a></li>
+            <li><a href="canal3.html">Canal 3</a></li>
+            <li><a href="info.html">+Info</a></li>
 		</ul>
 	</div>
 	<div class="app">
 		<div id="deviceready" class="blink">
+
+			<input type="checkbox" id="fs"> <span style='font-size:10px;'>Evitar apagado pantalla</span>
+	
+			<!--<button onclick="window.plugins.insomnia.keepAwake()">Evitar apagado</button>-->
+			<!--<button onclick="window.plugins.insomnia.allowSleepAgain()">allow sleep again</button>-->
+			<h4>CCRadio Canal 1</h4>
+			<p>Música de ambiente general.</p>
 			<iframe src="https://radioserver02.ccradio.es/public/ccradio/embed" frameborder="0" allowtransparency="true" style="width: 70%; min-height: 150px; border: 0;"></iframe>	
+			<div id='oyentes_c1'></div>
+			<div id='playing_c1'></div>
 		</div>
 	</div>
 	<footer>
@@ -81,6 +90,7 @@
 			 (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</footer>	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript">
